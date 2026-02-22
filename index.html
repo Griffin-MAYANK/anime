@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Gallery - Discover Beautiful Anime Art</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-torii-gate"></i>
+                <span>AnimeGallery</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Discover the Art of Anime</h1>
+            <p class="hero-subtitle">Explore a curated collection of stunning anime artwork from your favorite series</p>
+            <a href="#gallery" class="cta-button">
+                <span>Explore Gallery</span>
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+        <div class="hero-decoration">
+            <div class="floating-element circle"></div>
+            <div class="floating-element square"></div>
+            <div class="floating-element triangle"></div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section id="gallery" class="search-section">
+        <div class="container">
+            <h2 class="section-title">Gallery Collection</h2>
+            <div class="search-filter-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search anime titles...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="action">Action</button>
+                    <button class="filter-btn" data-filter="romance">Romance</button>
+                    <button class="filter-btn" data-filter="fantasy">Fantasy</button>
+                    <button class="filter-btn" data-filter="sci-fi">Sci-Fi</button>
+                    <button class="filter-btn" data-filter="slice-of-life">Slice of Life</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Our Gallery</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Curated Collection</h3>
+                    <p>Handpicked anime artwork from the most beloved series, showcasing the best of Japanese animation art.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Fan Community</h3>
+                    <p>Join a passionate community of anime enthusiasts who share your love for beautiful anime art.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>High Quality</h3>
+                    <p>All artwork is carefully selected to ensure the highest quality visual experience for our visitors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p>Have suggestions or want to contribute? We'd love to hear from you!</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 AnimeGallery. Made with <i class="fas fa-heart"></i> for anime fans worldwide.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Anime Details -->
+    <div id="animeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="">
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-meta">
+                        <span class="modal-genre" id="modalGenre"></span>
+                        <span class="modal-rating" id="modalRating"></span>
+                    </div>
+                    <p id="modalDescription"></p>
+                    <div class="modal-tags" id="modalTags"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
